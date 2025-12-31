@@ -2,7 +2,7 @@ import { View, type ViewProps } from "@poplar-ui/taro";
 
 import { AvatarProvider } from "../AvatarProvider";
 
-interface AvatarRootProps extends ViewProps {}
+export interface AvatarRootProps extends ViewProps {}
 
 export function AvatarRoot(props: AvatarRootProps) {
   return (
@@ -10,4 +10,8 @@ export function AvatarRoot(props: AvatarRootProps) {
       <View {...props} />
     </AvatarProvider>
   );
+}
+
+export namespace AvatarRoot {
+  export type Props = AvatarRootProps;
 }
