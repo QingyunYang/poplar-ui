@@ -6,8 +6,15 @@
     "build": "tsdown",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
   "devDependencies": {
-    "tsdown": "^0.18.3",
+    "tsdown": "^0.18.4",
     "typescript": "^5.9.3"
   },
   "peerDependencies": {

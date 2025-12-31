@@ -3,15 +3,23 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "",
+    "build": "tsdown",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
   },
   "devDependencies": {
     "@types/react": "^19.2.7",
-    "@poplar-ui/taro": "workspace:*",
-    "react": "^18"
+    "tsdown": "^0.18.4",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
+    "@poplar-ui/taro": "workspace:*",
     "@types/react": "^19.2.7",
     "react": "^18"
   },
