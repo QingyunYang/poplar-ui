@@ -20,5 +20,6 @@
   "peerDependencies": {
     "@tarojs/components": "^4.1.9",
     "@tarojs/taro": "^4.1.9"
-  }
+  },
+  "sideEffects": false
 }
