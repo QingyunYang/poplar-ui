@@ -1,4 +1,3 @@
-export * as Avatar from './index.parts';
+export * as Avatar from "./index.parts";
 
-export type * from './AvatarRoot'
-export type * from './AvatarImage'
+export type * from "./index.types";

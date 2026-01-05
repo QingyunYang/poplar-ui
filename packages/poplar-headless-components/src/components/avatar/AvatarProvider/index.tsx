@@ -1,6 +1,7 @@
 import * as React from "react";
 
-export type AvatarRootState = {};
+// export type AvatarRootState = object;
+import type { AvatarRootState } from '../index.types'
 
 interface AvatarContext {
   state: AvatarRootState;

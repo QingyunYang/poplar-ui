@@ -1,11 +1,7 @@
-import { Image, type ImageProps } from "@poplar-ui/taro";
+import { Image } from "@poplar-ui/taro";
 
-export interface AvatarImageProps extends ImageProps {}
+import type { AvatarImageProps } from "../index.types";
 
 export function AvatarImage(props: AvatarImageProps) {
   return <Image {...props} />;
-}
-
-export namespace AvatarImage {
-  export type Props = AvatarImageProps;
 }
