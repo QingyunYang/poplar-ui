@@ -1,16 +1,17 @@
 import { View } from "@poplar-ui/taro";
-import * as React from "react";
 
-import { type AvatarRootProps} from '../index.types'
+import { type AvatarRootProps } from "../index.types";
 import { AvatarProvider, useAvatarContext } from "../AvatarProvider";
+import { resolveClassName } from "../../../utils/resolveClassName";
 
 function AvatarContainer(props: AvatarRootProps) {
   const avatarContext = useAvatarContext();
 
-  const className = React.useMemo(() => {
-    if (!props.classNameFn) return props.className;
-    return `${props.className || ""} ${props.classNameFn(avatarContext.state)}`;
-  }, [avatarContext.state, props]);
+  const className = resolveClassName({
+    className: props.className,
+    classNameFn: props.classNameFn,
+    state: avatarContext.state,
+  });
 
   return <View {...props} className={className} />;
 }

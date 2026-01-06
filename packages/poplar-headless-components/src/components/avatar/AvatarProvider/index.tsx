@@ -1,14 +1,13 @@
 import * as React from "react";
 
-// export type AvatarRootState = object;
-import type { AvatarRootState } from '../index.types'
+import type { AvatarRootState } from "../index.types";
 
-interface AvatarContext {
+type AvatarContext = {
   state: AvatarRootState;
-}
+};
 
 const avatarContext = React.createContext<AvatarContext>({
-  state: {},
+  state: null,
 });
 
 export const useAvatarContext = () => {
@@ -22,11 +21,6 @@ export const useAvatarContext = () => {
 };
 
 export function AvatarProvider(props: React.PropsWithChildren) {
-  const value = React.useMemo(
-    () => ({
-      state: {},
-    }),
-    []
-  );
+  const value = React.useMemo(() => ({ state: null }), []);
   return <avatarContext.Provider value={value}>{props.children}</avatarContext.Provider>;
 }
